@@ -4,8 +4,8 @@ public class Deck{
 
   public Deck(){
     //Generate all cards in a typical playing deck
-    for(int suit = 0; suit < 4; suit++){
-      for(int rank = 2; rank < 15; rank++){
+    for(int rank = 2; rank < 15; rank++){
+      for(int suit = 0; suit < 4; suit++){
         cards.addElement(new Card(Suit.fromInt(suit),Rank.fromInt(rank)));
       }
     }
@@ -32,8 +32,16 @@ public class Deck{
 
   public void printDeck(){
     for(int i = 0; i < cards.size(); i++){
-      Card card = cards.get(i);
-      System.out.println(cards.get(i).getRank() + " of " + card.getSuit());
+      System.out.println(cards.get(i).getRank() + " of " + cards.get(i).getSuit());
+    }
+  }
+
+  public Boolean isEmpty(){
+    if (cards.isEmpty()){
+      return true;
+    }
+    else{
+      return false;
     }
   }
 
@@ -43,5 +51,5 @@ public class Deck{
       return randomNum;
   }
 
-  private Vector<Card> cards = new Vector();
+  private Vector<Card> cards = new Vector<Card>();
 }
