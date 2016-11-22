@@ -6,8 +6,10 @@ public class Player{
     this.name = name;
   }
 
-  //public Card play(){
-  //}
+  public Card play(){
+    Card card = new Card(Suit.Clubs,Rank.Two);
+    return card;
+  }
 
   public void takeCard(Card card){
     hand.addElement(card);

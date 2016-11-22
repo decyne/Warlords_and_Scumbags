@@ -20,6 +20,10 @@ public enum Rank {
     this.rank = rank;
   }
 
+  public int getValue(){
+    return rank;
+  }
+
   public static Rank fromInt(int i){
     //Generate the correct card from a number input
     switch(i){

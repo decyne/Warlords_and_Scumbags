@@ -22,6 +22,7 @@ public class Game{
   }
 
   public void playGame(){
+    this.deck.shuffle();
     this.deal();
     this.showPlayerHands();
   }

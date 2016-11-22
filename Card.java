@@ -13,6 +13,10 @@ public class Card {
     return this.rank;
   }
 
+  public int getIntRank(){
+    return rank.getValue();
+  }
+
   private Suit suit;
   private Rank rank;
 }
