@@ -6,7 +6,7 @@ public class Game{
     deck = new Deck();
     for(int i = 0; i < num_players; i++){
       String player_name = "Computer " + String.valueOf(i);
-      players.add(new Player(player_name));
+      players.add(new Human(player_name));
     }
   }
 
@@ -24,7 +24,8 @@ public class Game{
   public void playGame(){
     this.deck.shuffle();
     this.deal();
-    this.showPlayerHands();
+    Round round1 = new Round(deck,players);
+    round1.playRound();
   }
 
   private void showPlayerHands(){

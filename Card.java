@@ -17,6 +17,10 @@ public class Card {
     return rank.getValue();
   }
 
+  public String sayCard(){
+    return rank + " of " + suit;
+  }
+
   private Suit suit;
   private Rank rank;
 }

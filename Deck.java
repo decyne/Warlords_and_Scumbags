@@ -32,7 +32,7 @@ public class Deck{
 
   public void printDeck(){
     for(int i = 0; i < cards.size(); i++){
-      System.out.println(cards.get(i).getRank() + " of " + cards.get(i).getSuit());
+      System.out.println(cards.get(i).sayCard());
     }
   }
 

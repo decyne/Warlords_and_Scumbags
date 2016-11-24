@@ -2,13 +2,15 @@ import java.util.*;
 
 public class Player{
 
+  public Player(){
+  }
+
   public Player(String name){
     this.name = name;
   }
 
   public Card play(){
-    Card card = new Card(Suit.Clubs,Rank.Two);
-    return card;
+    return null;
   }
 
   public void takeCard(Card card){
@@ -18,11 +20,17 @@ public class Player{
   public void showHand(){
     System.out.println("Hand of " + name);
     System.out.println("------------------------");
-    for(int i = 0; i < hand.size(); i++)
-    System.out.println(hand.get(i).getRank() + " of " + hand.get(i).getSuit());
+    for(int i = 0; i < hand.size(); i++){
+      System.out.println(String.valueOf(i) + ") " + hand.get(i).sayCard());
+    }
+    System.out.println(hand.size() + ") Pass round");
     System.out.println();
   }
 
-  private String name;
-  private Vector<Card> hand = new Vector<Card>();
+  public String getName(){
+    return name;
+  }
+
+  protected String name;
+  protected Vector<Card> hand = new Vector<Card>();
 }
